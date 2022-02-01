@@ -36,7 +36,7 @@
       "description": "A boolean, to define whether or not to include the creation of the ./CODE_OF_CONDUCT.md file."
     }, 
     
-    "includeGithubTemplates" : {
+    "includeGithubFiles" : {
       "type": "parameter",
       "datatype" :"bool",
       "defaultValue": "true",
@@ -69,7 +69,7 @@
         }, 
 
         {
-          "condition": "(!includeGithubTemplates)",
+          "condition": "(!includeGithubFiles)",
           "exclude": [
             "**/.github/**"
           ]
