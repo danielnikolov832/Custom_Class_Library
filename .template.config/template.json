@@ -11,6 +11,6 @@
       "language": "C#",
       "type":"project"
     },
-    "sourceName": "Templates.ClassLib",
+    "sourceName": "Custom_Class_Library",
     "preferNameDirectory": true
 }
