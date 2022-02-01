@@ -1,16 +1,80 @@
 {
-    "$schema": "http://json.schemastore.org/template",
-    "author": "Daniel Nikolov",
-    "classifications": [ "Custom", "Library" ],
-    "name": "Custom Class Library",
-    "identity": "DanielNikolov.Templates.ClassLib",
-    "groupIdentity": "DanielNikolov.Templates",
-    "generatorVersions": "[1.0.0.0-*)",
-    "shortName": "customclasslib",
-    "tags": {
-      "language": "C#",
-      "type":"project"
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Daniel Nikolov",
+  "classifications": [ "Custom", "Library" ],
+  "name": "Custom Class Library",
+  "identity": "DanielNikolov.Templates.ClassLib",
+  "groupIdentity": "DanielNikolov.Templates",
+  "generatorVersions": "[1.0.0.0-*)",
+  "shortName": "customclasslib",
+  "tags": {
+    "language": "C#",
+    "type":"project"
+  },
+  "sourceName": "Custom_Class_Library",
+  "preferNameDirectory": true,
+
+  "symbols": {
+    "includeLicense" : {
+      "type": "parameter",
+      "datatype" :"bool",
+      "defaultValue": "true",
+      "description": "A boolean, to define whether or not to include the creation of the ./LICENSE.md file."
     },
-    "sourceName": "Custom_Class_Library",
-    "preferNameDirectory": true
+
+    "includeReadMe" : {
+      "type": "parameter",
+      "datatype" :"bool",
+      "defaultValue": "true",
+      "description": "A boolean, to define whether or not to include the creation of the ./Documentation/README.md file."
+    }, 
+    
+    "includeCodeOfConduct" : {
+      "type": "parameter",
+      "datatype" :"bool",
+      "defaultValue": "true",
+      "description": "A boolean, to define whether or not to include the creation of the ./CODE_OF_CONDUCT.md file."
+    }, 
+    
+    "includeGithubTemplates" : {
+      "type": "parameter",
+      "datatype" :"bool",
+      "defaultValue": "true",
+      "description": "A boolean, to define whether or not to include the creation of the .github folder and its files."
+    }
+  },
+
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!includeLicense)",
+          "exclude": [
+            "**/LICENSE.md"
+          ]
+        },
+
+        {
+          "condition": "(!includeReadMe)",
+          "exclude": [
+            "**/README.md"
+          ]
+        }, 
+
+        {
+          "condition": "(!includeCodeOfConduct)",
+          "exclude": [
+            "**/CODE_OF_CONDUCT.md"
+          ]
+        }, 
+
+        {
+          "condition": "(!includeGithubTemplates)",
+          "exclude": [
+            "**/.github/**"
+          ]
+        }
+      ]
+    }
+  ]
 }
