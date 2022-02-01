@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Daniel Nikolov",
+    "classifications": [ "Custom", "Library" ],
+    "name": "Custom Class Library",
+    "identity": "DanielNikolov.Templates.ClassLib",
+    "groupIdentity": "DanielNikolov.Templates",
+    "generatorVersions": "[1.0.0.0-*)",
+    "shortName": "customclasslib",
+    "tags": {
+      "language": "C#",
+      "type":"project"
+    },
+    "sourceName": "Templates.ClassLib",
+    "preferNameDirectory": true
+}
